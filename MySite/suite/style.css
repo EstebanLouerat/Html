@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Zilla Slab', serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    width: 800px;
+}
+
+.form input {
+    appearance: none;
+    border: 0px;
+    border-radius: 16px;
+    background-color: rgb(237, 237, 237);
+    color: rgb(5, 71, 82);
+    flex: 1 1 0%;
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+    caret-color: #111;
+    padding: 16px;
+}
+
+.form input::after, .form input::before {
+    box-sizing: border-box;
+}
+
+input {
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    /*background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));*/
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 2px;
+    /*border-style: inset;*/
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+.form button {
+    position: relative;
+    display: inline-block;
+    padding: 1px 2px;
+    margin: 0em;
+    color: #111;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    overflow: hidden;
+    background: white;
+}
+
+.form button:hover {
+    background: rgba(0, 0, 0, 0.1);
+}

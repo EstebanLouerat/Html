@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Quick Ripple Effects</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="logo">
+                    <img src="image/nike.png">
+                </div>
+                <div class="imgBx">
+                    <img src="image/shoes_3.png">
+                </div>
+                <div class="contentBx">
+                    <h2>Nike Shoes</h2>
+                    <div class="size">
+                        <h3>Size :</h3>
+                        <span>39</span>
+                        <span>40</span>
+                        <span>41</span>
+                        <span>42</span>
+                    </div>
+                    <div class="color">
+                        <h3>Color :</h3>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a class="button" href="#">Buy Now</a>
+                    <script type="text/javascript">
+                        const buttons = document.querySelectorAll('a');
+                        buttons.forEach(btn => {
+                            btn.addEventListener('click', function(e) {
+                                let x = e.clientX - e.target.offsetLeft;
+                                let y = e.clientY - e.target.offsetTop;
+            
+                                let ripples = document.createElement('span');
+                                ripples.style.left = x + 'px';
+                                ripples.style.top = y + 'px';
+                                this.appendChild(ripples);
+            
+                                setTimeout(() => {
+                                    //ripples.remove();
+                                }, 1000);
+                            })
+                        })
+                        </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
