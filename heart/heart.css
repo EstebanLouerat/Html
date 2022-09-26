@@ -1,0 +1,31 @@
+* {
+    align-items: center;
+    margin: 100px 100px;
+}
+
+.heart {
+    position: relative;
+    height: 160px;
+    width: 100px;
+    background: #d16ba5;
+    border-radius: 200px 200px 0 0;
+    transform: rotate(45deg);
+    transition: 1s ease-in-out;
+}
+
+.heart::before {
+    content: "";
+    position: absolute;
+    background: #d16ba5;
+    height: 160px;
+    width: 100px;
+    border-radius: 200px 200px 0 0;
+    transform: rotate(-90deg);
+    left: -30px;
+    top: 30px;
+}
+
+.heart:hover {
+    transform: rotate(410deg);
+    transition: 1s ease-in-out;
+}
